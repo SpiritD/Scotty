@@ -1,3 +1,5 @@
+import sys
+import os
 import time
 import argparse
 
@@ -18,8 +20,21 @@ def parse_args():
     return parser.parse_args()
 
 
+def check_storage_path(storage_path):
+    if not os.path.isdir(storage_path):
+        try:
+            os.makedirs(storage_path)
+        except Exception as e:
+            print("Cannot create dir: {}".format(e))
+            return False
+    return True
+
 if __name__ == "__main__":
     args = parse_args()
+
+    if not check_storage_path(args.storage_path):
+        sys.exit(1)
+
     pairs = ['BTCUSD', 'LTCUSD', 'ETCUSD', 'ETHUSD', 'RRTUSD']
     threads = {}
 
