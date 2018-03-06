@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/SpiritD/Scotty.git
-cd cindicator
+cd Scotty
 pip3 install -r requirements.txt
 ```
 
