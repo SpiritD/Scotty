@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/SpiritD/cindicator.git
+git clone https://github.com/SpiritD/Scotty.git
 cd cindicator
 pip3 install -r requirements.txt
 ```
